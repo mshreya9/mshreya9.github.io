@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.nav-item {
+    padding-left : 10px;
+    padding-right : 10px
+}
+.nav-link {
+    font-size : 18px
+}
+.navbar-brand {
+    font-size: 22px;
+}
