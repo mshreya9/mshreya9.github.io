@@ -13,10 +13,6 @@
     padding : 15px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
 }
-#startup-blog, #hackathon-blog {
-    height:100%;
-    width:100%;
-}
 .blog-name{
     height:50px;
     width : 100%;
