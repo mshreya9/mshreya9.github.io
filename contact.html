@@ -82,7 +82,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-lg-4"></div>
-            <div class="col-12 col-lg-4" style="text-align:center; margin-top:100px;">
+            <div class="col-12 col-lg-4" style="text-align:center; margin-top:60px;">
                 <h1><strong>Drop a message</strong></h1>
             </div>
             <div class="col-12 col-lg-4"></div>
@@ -90,29 +90,24 @@
 
         <div class="row">
             <div class="col-12 col-lg-4"></div>
-            <div class="col-12 col-lg-4" style="border: 2px solid red; margin-top:50px;">
-                <div class="col-12 col-lg-4" style="margin-top:20px;">
-                    <div class="input-head">
-                        Name<sup>*</sup>
+            <div class="col-12 col-lg-4" style="margin-top:30px; padding : 10px">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="name">Full name<sup>*</sup></label>
+                        <input oninput="nameVerify(event)" type="text" id="name" name="" style="width : 100%">
                     </div>
-                    <input oninput="nameVerify(event)" type="text" id="name" name="">
-                </div>
+                    <div class="col-12">
+                        <label for="email">Email<sup>*</sup></label>
+                        <input oninput="emailVerify(event)" type="text" id="email" name="" style="width : 100%">
+                    </div>
 
-                <div class="col-12 col-lg-4" style="margin-top:20px;">
-                    <div class="input-head">
-                        Email<sup>*</sup>
+                    <div class="col-12">
+                        <label for="message">Message<sup>*</sup></label>
+                        <textarea id="message" oninput="messageVerify(event)" style="width : 100%; min-height : 150px"></textarea>
                     </div>
-                    <input oninput="emailVerify(event)" type="text" id="email" name="">
-                </div>
-
-                <div class="col-12 col-lg-4" style="margin-top:20px;">
-                    <div class="input-head">
-                        Message<sup>*</sup>
+                    <div class="col-12" style="margin-top:30px; text-align:center">
+                        <button class="btn btn-primary" id="submit-btn">Submit</button>
                     </div>
-                    <textarea id="message" oninput="messageVerify(event)" cols="30" rows="6" placeholder="Remember, be nice!"></textarea>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <button id="submit-btn">Submit</button>
                 </div>
             </div>
             <div class="col-12 col-lg-4"></div>
@@ -135,7 +130,7 @@
             if (event.target == undefined) {
                 if (re.test(event)) {
                     return true;
-                } else{
+                } else {
                     return false;
                 }
             }
@@ -159,7 +154,7 @@
                 }
             }
             else {
-                if (name.length > 0){
+                if (name.length > 0) {
                     event.target.style.borderColor = "Green";
                 } else {
                     event.target.style.borderColor = "Red";
@@ -187,4 +182,5 @@
         }
     </script>
 </body>
+
 </html>
