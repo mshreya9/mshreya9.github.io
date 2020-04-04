@@ -25,11 +25,12 @@ textarea {
     padding:5px;
     width:50%;
     background-color: #0096D6;
-    border:2px solid #006AFF;
+    border:2px solid #0096D6;
     border-radius: 5px;
 }
 #submit-btn:hover {
     background-color: #006AFF;
+    border:2px solid #006AFF;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
 }
 
