@@ -28,11 +28,9 @@
 }
 .link-text-prop:hover {
     text-decoration:none;
-    color:black;
-    font-weight:bolder;
+    color:blue;
 }
 .link-text-prop {
-    color:black;
+    color:#006AFF;
     text-decoration: none;
-    font-weight:400;  
 }
