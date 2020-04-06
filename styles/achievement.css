@@ -28,6 +28,7 @@
 
 .conf-content, .hack-content, .certificate-content, .volunteer-content { 
     padding-bottom:50px;
+    height : 200px; 
     border-top-left-radius: 10px;
     border-left: 2px solid #ECECEC;
     border-top: 2px solid #ECECEC;
