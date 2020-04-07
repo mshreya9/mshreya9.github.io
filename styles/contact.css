@@ -31,9 +31,9 @@ textarea {
     cursor: pointer;
 }
 #submit-btn:hover {
-    color:black;
-    background-color: #ECECEC;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+    color: whitesmoke;
+    background-color: #006AFF;
+    border: 2px solid #006AFF;
 }
 
 input:-webkit-autofill,
