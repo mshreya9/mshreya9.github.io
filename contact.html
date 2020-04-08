@@ -30,6 +30,7 @@
     <link rel="canonical" href="https://mshreya9.github.io/blog.html">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/navbar.css">
@@ -93,19 +94,22 @@
                 <div class="row">
                     <div class="col-12">
                         <label for="name">Full name<sup>*</sup></label>
-                        <input oninput="nameVerify(event)" type="text" id="name" name="" style="width : 100%" title="Enter your full name">
+                        <input oninput="nameVerify(event); activateBtn()" type="text" id="name" name=""
+                            style="width : 100%" title="Enter your full name">
                     </div>
                     <div class="col-12">
                         <label for="email">Email<sup>*</sup></label>
-                        <input oninput="emailVerify(event)" type="text" id="email" name="" style="width : 100%" title="Enter your email">
+                        <input oninput="emailVerify(event); activateBtn()" type="text" id="email" name=""
+                            style="width : 100%" title="Enter your email">
                     </div>
 
                     <div class="col-12">
                         <label for="message">Message<sup>*</sup></label>
-                        <textarea id="message" oninput="messageVerify(event)" style="width : 100%; min-height : 150px" title="Enter your message"></textarea>
+                        <textarea id="message" oninput="messageVerify(event); activateBtn()"
+                            style="width : 100%; min-height : 150px" title="Enter your message"></textarea>
                     </div>
                     <div class="col-12" style="margin-top:30px; text-align:center">
-                        <button id="submit-btn"><strong>Submit</strong></button>
+                        <button id="submit-btn" class="btn btn-primary" disabled><strong>Submit</strong></button>
                     </div>
                 </div>
             </div>
@@ -115,8 +119,8 @@
 
     <script src="./scripts/navbar.js" async></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"
-        async></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"
         async></script>
@@ -137,14 +141,15 @@
                 let email = event.target.value;
                 if (re.test(email)) {
                     event.target.style.borderColor = "Green";
+                    return true;
                 } else {
                     event.target.style.borderColor = "Red";
+                    return false;
                 }
             }
         }
 
         function nameVerify(event) {
-            let name = event.target.value;
             if (event.target == undefined) {
                 if (event.length > 0) {
                     return true;
@@ -153,16 +158,18 @@
                 }
             }
             else {
+                let name = event.target.value;
                 if (name.length > 0) {
                     event.target.style.borderColor = "Green";
+                    return true;
                 } else {
                     event.target.style.borderColor = "Red";
+                    return false;
                 }
             }
         }
 
         function messageVerify(event) {
-            let message = event.target.value;
             if (event.target == undefined) {
                 if (event.length > 0) {
                     return true;
@@ -172,12 +179,77 @@
                 }
             }
             else {
+                let message = event.target.value;
                 if (message.length > 0) {
                     event.target.style.borderColor = "Green";
+                    return true;
                 } else {
                     event.target.style.borderColor = "Red";
+                    return false;
                 }
             }
+        }
+
+        function activateBtn() {
+            const name = document.getElementById("name").value
+            const email = document.getElementById("email").value
+            const message = document.getElementById("message").value
+
+            if (emailVerify(email) && nameVerify(name) && messageVerify(message)) {
+                document.getElementById("submit-btn").disabled = false;
+            } else {
+                document.getElementById("submit-btn").disabled = true;
+            }
+        }   
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+    <script>
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCc8-lTUMli8Sf-JUsiQafTan-EcBlooj0",
+            authDomain: "portfolio-364e6.firebaseapp.com",
+            databaseURL: "https://portfolio-364e6.firebaseio.com",
+            projectId: "portfolio-364e6",
+            storageBucket: "portfolio-364e6.appspot.com",
+            messagingSenderId: "1060073827936",
+            appId: "1:1060073827936:web:b334eb94b8feab88631d05",
+            measurementId: "G-Y7TT28BEM1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        window.onload = () => {
+            document.getElementById("submit-btn").addEventListener('click', () => {
+                const name = document.getElementById("name").value
+                const email = document.getElementById("email").value
+                const message = document.getElementById("message").value
+                const data = {
+                    name, email, message,
+                    time: new Date(Date.now()).toLocaleString().split(',')[0]
+                };
+
+                if (emailVerify(email) && nameVerify(name) && messageVerify(message)) {
+                    document.getElementById("submit-btn").innerHTML = "Sending...";
+                    db.collection('user-data').add(data)
+                        .then((res) => {
+                            console.log("Inserted");
+                            // data inserted successfully
+                            document.getElementById("submit-btn").style.backgroundColor = "#4BB543";
+                            document.getElementById("submit-btn").style.borderColor = "#4BB543";
+                            document.getElementById("submit-btn").innerHTML = "Message Sent Successfully!";
+                        })
+                        .catch((err) => {
+                            // data failed to insert
+                            console.log("LOL");
+                            document.getElementById("submit-btn").style.backgroundColor = "#FF0000";
+                            document.getElementById("submit-btn").style.borderColor = "#FF0000";
+                            document.getElementById("submit-btn").innerHTML = "Error!";
+                        });
+                }
+            })
         }
     </script>
 </body>

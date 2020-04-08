@@ -24,16 +24,7 @@ textarea {
 #submit-btn {
     padding:5px;
     width:50%;
-    color:black;
-    background-color: white;
-    border:2px solid lightgray;
     border-radius: 5px;
-    cursor: pointer;
-}
-#submit-btn:hover {
-    color: whitesmoke;
-    background-color: #006AFF;
-    border: 2px solid #006AFF;
 }
 
 input:-webkit-autofill,
