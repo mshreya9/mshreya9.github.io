@@ -25,11 +25,15 @@
     <meta itemprop="name" content="Shreya Maheshwari">
     <meta itemprop="description" content="Portfolio of Shreya Maheshwari">
     <meta itemprop="image" content="#">
+    <!-- <script src="node_modules/confetti-js/dist/index.min.js"></script> -->
     <link rel="canonical" href="https://mshreya9.github.io/home.html">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
@@ -39,10 +43,13 @@
 </head>
 
 <body>
+    <!-- <div style="position : absolute; top : 0; z-index : -100">
+        <canvas id="confetti"></canvas>
+    </div> -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white ">
         <a class="navbar-brand" href="index.html">
             <img src="./assets/shreya-logo-img.png" id="logo-top" alt="Shreya Portfolio"
-                style="width:80px; height:60px;">
+                style="width:70px; height:60px;">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -77,29 +84,85 @@
             </ul>
         </div>
     </nav>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 col-12"></div>
             <div class="col-12 col-lg-8">
-                <div style="margin-top:150px; padding: 0px 30px;">
+                <div style="margin-top : 150px; padding: 0px 30px;">
                     <div class="head-title">
                         <h1><strong>Hi, I am Shreya</strong></h1>
                     </div>
                     <div class="head-content">
-                        A meticulous Web Developer with a passion of designing web pages with better performance and
-                        accessibility. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        A meticulous Front-End Web Developer with a passion of designing web pages with better
+                        performance,
+                        accessibility and focuses on crafting clean and user-friendly experiences.
                     </div>
                 </div>
             </div>
             <div class="col-lg-2 col-12"></div>
         </div>
+
+        <div class="row">
+            <div class="col-12" style="text-align:center; margin-top:180px;">
+                <img src="./assets/down-arrow.gif" href="#about" style="cursor: pointer; width:120px; height:120px;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-12"></div>
+            <div class="col-12 col-lg-8">
+                <div style="margin-top : 30px; padding: 0px 30px;">
+                    <div id="about">
+                        <h1>About Me</h1>
+                        <div style="border-bottom:5px solid #006AFF; width:70px;"></div>
+                    </div>
+
+                    <div class="head-content">
+                        I am an undergraduate engineering student doing Bachelors of Technology in Computer Science from
+                        Vellore Institute of Technology, Vellore, Tamil Nadu, India. I am an open source contributor and
+                        I totally love designing and building websites. I do competitive coding as
+                        well. I beleive in upgrading my skills each day and become the best version of myself.
+
+                        I belong to a very diverse state, Rajasthan, bearing numerous beautiful forts and aesthetic
+                        sites that include various palaces, forts and pilgrim centres that define what Rajasthan is.
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-12"></div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-12 col-lg-5"></div>
+            <div class="col-12 col-lg-2">
+                <div class="row" style="border:2px solid black; padding:10px">
+                    <div class="col-3" style="text-align:center;">
+                        <i class="fa fa-github"></i>
+                    </div>
+                    <div class="col-3" style="text-align:center;">
+                        <i class="fa fa-linkedin-square"></i>
+                    </div>
+                    <div class="col-3" style="text-align:center;">
+                        <i class="fa fa-instagram"></i>
+                    </div>
+                    <div class="col-3" style=text-align:center;">
+                        <i class="fa fa-facebook-official"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5"></div>
+        </div> -->
     </div>
 
+    <!-- <script>
+        var confettiSettings = {"target":"confetti","max":"80","size":"1.5","animate":true,"props":["circle","square","triangle","line"],"colors":[[165,104,246],[230,61,135],[0,199,228],[253,214,126]],"clock":"25","rotate":true,"width":"1536","height":"674","start_from_edge":true,"respawn":false}
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"
         async></script>
@@ -108,6 +171,7 @@
         async></script>
 
     <script src="./scripts/navbar.js"></script>
+
 </body>
 
 </html>
