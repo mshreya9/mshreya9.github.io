@@ -25,7 +25,6 @@
     <meta itemprop="name" content="Shreya Maheshwari">
     <meta itemprop="description" content="Portfolio of Shreya Maheshwari">
     <meta itemprop="image" content="#">
-    <!-- <script src="node_modules/confetti-js/dist/index.min.js"></script> -->
     <link rel="canonical" href="https://mshreya9.github.io/home.html">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -35,25 +34,29 @@
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
     <!-- Google Fonts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+
     <title>Shreya</title>
+
+    <style>
+        .head-content {
+            font-size: 25px;
+            padding-top: 15px;
+        }
+    </style>
 
 </head>
 
 <body>
-    <!-- <div style="position : absolute; top : 0; z-index : -100">
-        <canvas id="confetti"></canvas>
-    </div> -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white ">
         <a class="navbar-brand" href="index.html">
             <div style="padding-top:5px;">
-                <div style="border-top:6px solid #4D7CDF; width:40%;"></div>
+                <div style="border-top:6px solid #4D7CDF; width:45%;"></div>
                 <h4 style="font-weight: bolder; letter-spacing:-1px;">Shreya</h4>
             </div>
         </a>
-
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="toggle-cover">
@@ -90,14 +93,13 @@
         <div class="row">
             <div class="col-lg-2 col-12"></div>
             <div class="col-12 col-lg-8">
-                <div style="margin-top : 120px; padding: 0px 30px;">
-                    <div class="head-title">
-                        <h1><strong>Hi, I am Shreya</strong></h1>
+                <div style="margin-top : 150px; padding: 0px 30px;">
+                    <div>
+                        <h1><strong>Hi, I am <span id="typed" style="color:#4D7CDF"></span></strong></h1>
                     </div>
                     <div class="head-content">
                         A meticulous Front-End Web Developer with a passion of designing web pages with better
-                        performance,
-                        accessibility and focuses on crafting clean and user-friendly experiences.
+                        performance, accessibility and focuses on crafting clean and user-friendly experiences.
                     </div>
                 </div>
             </div>
@@ -157,11 +159,14 @@
         </div> -->
     </div>
 
-    <!-- <script>
-        var confettiSettings = {"target":"confetti","max":"80","size":"1.5","animate":true,"props":["circle","square","triangle","line"],"colors":[[165,104,246],[230,61,135],[0,199,228],[253,214,126]],"clock":"25","rotate":true,"width":"1536","height":"674","start_from_edge":true,"respawn":false}
-        var confetti = new ConfettiGenerator(confettiSettings);
-        confetti.render();
-    </script> -->
+    <script>
+        var typed = new Typed('#typed', {
+            strings: ['Shreya', 'Shreya', 'a Web Developer', 'a Competitive Coder', 'Shreya', 'Shreya', 'a Web Developer', 'a Competitive Coder', 'Shreya'],
+            smartBackspace: true,
+            typeSpeed: 30,
+            backSpeed: 30,
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
