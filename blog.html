@@ -10,6 +10,9 @@
     <meta name="keywords" content="Shreya Maheshwari, Shreya, mshreya9, web developer, techie">
     <meta name="description" content="Portfolio of Shreya Maheshwari">
     <meta name="author" content="Shreya Maheshwari">
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
     <!-- For Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Shreya Maheshwari">
@@ -90,8 +93,12 @@
             <div class="col-1 col-lg-4"></div>
             <div class="col-10 col-lg-4">
                 <div class="rectangle-icon">
-                    <img src="assets/startup-blog.jpeg" id="startup-blog" class="img-fluid"
-                        style="max-width: 100%; height : auto" alt="startup">
+                    <picture>
+                        <source srcset="./assets/startup-blog.webp 1x" type="image/webp">
+                        <source srcset="./assets/startup-blog.png  1x" type="image/png">
+                        <img src="assets/startup-blog.jpeg" id="startup-blog" class="img-fluid"
+                            style="max-width: 100%; height : auto" alt="startup">
+                    </picture>
                 </div>
                 <div class="blog-name">
                     <a target="_blank" rel="noreferrer" href="http://bit.ly/DSCStartupBlog" class="link-text-prop">Read
@@ -105,8 +112,12 @@
             <div class="col-1 col-lg-4"></div>
             <div class="col-10 col-lg-4" style="padding-bottom:50px;">
                 <div class="rectangle-icon">
-                    <img src="assets/hacks-blog.png" id="hackathon-blog" class="img-fluid"
-                        style="max-width: 100%; height : auto;" alt="hacks">
+                    <picture>
+                        <source srcset="./assets/hacks-blog.webp 1x" type="image/webp">
+                        <source srcset="./assets/hacks-blog.png  1x" type="image/png">
+                        <img src="assets/hacks-blog.png" id="hackathon-blog" class="img-fluid"
+                            style="max-width: 100%; height : auto;" alt="hacks">
+                    </picture>
                 </div>
                 <div class="blog-name">
                     <a target="_blank" rel="noreferrer" href="http://bit.ly/dschacks" class="link-text-prop">Read the
