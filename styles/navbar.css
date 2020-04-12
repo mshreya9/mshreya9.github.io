@@ -94,7 +94,7 @@ button:focus {
   */
   @media (min-width: 481px) and (max-width: 767px) {
     #logo-top {
-        margin-left: 150px;
+        margin-left: 0px;
     }
 }
   

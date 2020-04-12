@@ -41,13 +41,96 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/navbar.css">
-
     <title>Shreya Maheshwari | Portfolio</title>
 
     <style>
         .head-content {
             font-size: 25px;
             padding-top: 15px;
+        }
+
+        @media (min-width: 1281px) {
+            #index-head {
+                height: 50px;
+            }
+
+            #down-arrow-vid {
+                margin-top: 180px;
+            }
+
+            #navbar-content-space {
+                margin-top : 170px
+            }
+        }
+
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            #index-head {
+                height: 50px;
+            }
+
+            #down-arrow-vid {
+                margin-top: 180px;
+            }
+
+            #navbar-content-space {
+                margin-top : 170px
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            #index-head {
+                height: 50px;
+            }
+
+            #down-arrow-vid {
+                margin-top: 180px;
+            }
+
+            #navbar-content-space {
+                margin-top : 170px
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            #index-head {
+                height: 50px;
+            }
+
+            #down-arrow-vid {
+                margin-top: 180px;
+            }
+
+            #navbar-content-space {
+                margin-top : 170px
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            #index-head {
+                height: 150px;
+            }
+
+            #down-arrow-vid {
+                margin-top: 50px;
+            }
+
+            #navbar-content-space {
+                margin-top : 100px
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            #index-head {
+                height: 150px;
+            }
+
+            #down-arrow-vid {
+                margin-top: 50px;
+            }
+
+            #navbar-content-space {
+                margin-top : 100px
+            }
         }
     </style>
 
@@ -97,9 +180,10 @@
         <div class="row">
             <div class="col-lg-2 col-12"></div>
             <div class="col-12 col-lg-8">
-                <div style="margin-top : 170px; padding: 0px 30px;">
+                <div id="navbar-content-space" padding: 0px 30px;">
                     <div>
-                        <h1><strong>Hi, I am <span id="typed" style="color:#4D7CDF"></span></strong></h1>
+                        <h1 id="index-head"><strong>Hi, I am <span id="typed" style="color:#4D7CDF"></span></strong>
+                        </h1>
                     </div>
                     <div class="head-content">
                         A meticulous Front-End Web Developer with a passion of designing web pages with better
@@ -111,9 +195,15 @@
         </div>
 
         <div class="row">
-            <div class="col-12" style="text-align:center; margin-top:180px;">
-                <a href="#about"><img src="./assets/down-arrow.gif" alt="down-arrow"
-                        style="cursor: pointer; width:120px; height:120px;"></a>
+            <div class="col-12" id="down-arrow-vid" style="text-align:center;">
+                <a href="#about">
+                    <video autoplay loop muted playsinline style="cursor: pointer; width:120px; height:120px;">
+                        <source src="./assets/down-arrow.webm" type="video/webm">
+                        <source src="./assets/down-arrow.mp4" type="video/mp4">
+                        <!-- <img src="./assets/down-arrow.gif" alt="down-arrow"
+                            style="cursor: pointer; width:120px; height:120px;"> -->
+                </a>
+                </video>
             </div>
         </div>
 
@@ -157,32 +247,32 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-5"></div>
-                <div class="col-12 col-lg-2">
+                <div class="col-3 col-lg-5"></div>
+                <div class="col-6 col-lg-2">
                     <div class="row" style="text-align:center; padding:10px; margin-top:20px;">
                         <div class="col-3" style="text-align:center;">
-                            <a href="https://github.com/mshreya9">
+                            <a href="https://github.com/mshreya9" aria-label="Contact on Github">
                                 <i class="fa fa-github"></i>
                             </a>
                         </div>
                         <div class="col-3" style="text-align:center;">
-                            <a href="https://www.linkedin.com/in/mshreya9/">
+                            <a href="https://www.linkedin.com/in/mshreya9/" aria-label="Contact on Linkedin">
                                 <i class="fa fa-linkedin-square"></i>
                             </a>
                         </div>
                         <div class="col-3" style="text-align:center;">
-                            <a href="https://www.instagram.com/mshreya9/">
+                            <a href="https://www.instagram.com/mshreya9/" aria-label="Contact on Instagram">
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
                         <div class="col-3" style="text-align:center;">
-                            <a href="https://www.facebook.com/mshreyaa9">
+                            <a href="https://www.facebook.com/mshreyaa9" aria-label="Contact on Facebook">
                                 <i class="fa fa-facebook-official"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5"></div>
+                <div class="col-3 col-lg-5"></div>
             </div>
 
 
@@ -212,7 +302,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"
         async></script>
-
     <script src="./scripts/navbar.js"></script>
 
 </body>
