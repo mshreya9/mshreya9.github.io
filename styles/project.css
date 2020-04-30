@@ -55,3 +55,11 @@
     text-decoration:none;
     color:#045BE7;
 }
+
+footer {
+	width: 100%;
+	background-color:#ECECEC;
+	text-align: center;
+    height:50px;
+    padding-top:10px;
+}
