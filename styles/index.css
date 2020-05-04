@@ -7,6 +7,14 @@ html {
     scroll-behavior: smooth;
 }
 
+footer {
+	width: 100%;
+	background-color:#ECECEC;
+	text-align: center;
+    height:50px;
+    padding-top:10px;
+}
+
 @media (min-width: 1281px) {
     #index-head {
         height: 50px;
