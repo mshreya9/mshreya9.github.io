@@ -68,6 +68,12 @@
     color:#045BE7;
 }
 
+.img-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
 footer {
 	width: 100%;
 	background-color:#ECECEC;
