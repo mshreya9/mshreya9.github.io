@@ -40,6 +40,18 @@
     background-color: #ECECEC;
 }
 
+.proj-link-0 {
+    width : 100%;
+    padding-left:10px;
+    height:60px;   
+    background-color:white;
+    line-height:40px;
+    border-top: none;
+    border-left: 2px solid #ECECEC;
+    border-right: 2px solid #ECECEC;
+    border-bottom:none;
+}
+
 .proj-link-2 {
     width : 100%;
     padding-left:10px;
